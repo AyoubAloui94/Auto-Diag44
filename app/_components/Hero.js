@@ -27,7 +27,7 @@ function Hero() {
       </div>
       <div className="grid grid-cols-3 mt-16 mb-10">
         {tabs.map(({ id, title, p }) => (
-          <div key={id} className="flex flex-col justify-center items-center text-gray-100 backdrop-filter backdrop-blur-sm backdrop-grayscale-[35%] px-4 py-14 mx-4 rounded-xl ">
+          <div key={id} className="flex flex-col justify-center items-center text-gray-100 backdrop-filter backdrop-blur-2xl backdrop-sepia-[55%] px-4 py-14 mx-4 rounded-xl shadow-xl">
             <h2 className="font-semibold text-lg mb-4">{title}</h2>
             <p className="text-center">{p}</p>
           </div>
