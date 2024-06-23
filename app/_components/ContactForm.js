@@ -1,37 +1,64 @@
+"use client"
+
 import Image from "next/image"
 import img from "@/public/photo-3.webp"
+import emailjs from "@emailjs/browser"
+import { useFormStatus } from "react-dom"
+import SpinnerMini from "./SpinnerMini"
 
 function ContactForm() {
+  async function handleEmail(formData) {
+    const data = Object.fromEntries(formData)
+    console.log(formData)
+
+    const { name, phone, email, carMake, model, description } = data
+
+    const params = {
+      user_name: name,
+      user_email: email,
+      user_phone: phone,
+      user_car_make: carMake,
+      user_car_model: model,
+      message: description,
+      to_name: "Aziz"
+    }
+
+    console.log(params)
+
+    await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, params, {
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    })
+  }
   return (
     <div className="grid grid-cols-2 px-10 gap-0">
       <div className=" flex justify-end items-center">
-        <form className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 max-w-[30rem]">
+        <form className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 max-w-[30rem]" action={handleEmail}>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="name">Nom</label>
-              <input id="name" placeholder="name" className="rounded-xl py-3 px-5 mb-3 w-full" />
+              <input id="name" name="name" placeholder="name" className="rounded-xl py-3 px-5 mb-3 w-full" />
             </div>
             <div>
               <label htmlFor="phone">Téléphone</label>
-              <input id="phone" placeholder="numero" className="rounded-xl py-3 px-5 mb-3 w-full" />
+              <input id="phone" name="phone" placeholder="numero" className="rounded-xl py-3 px-5 mb-3 w-full" />
             </div>
           </div>
           <label htmlFor="email">E-mail</label>
-          <input id="email" placeholder="email" className="rounded-xl py-3 px-5 mb-3" />
+          <input id="email" name="email" placeholder="email" className="rounded-xl py-3 px-5 mb-3" />
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="car-make">Marque</label>
-              <input id="car-make" placeholder="marque" className="rounded-xl py-3 px-5 mb-3 w-full" />
+              <input id="car-make" name="carMake" placeholder="marque" className="rounded-xl py-3 px-5 mb-3 w-full" />
             </div>
             <div>
               <label htmlFor="year-model">Année/Modèle</label>
-              <input id="year-model" placeholder="Modèle" className="rounded-xl py-3 px-5 mb-3 w-full" />
+              <input id="year-model" name="model" placeholder="Modèle" className="rounded-xl py-3 px-5 mb-3 w-full" />
             </div>
           </div>
           <label htmlFor="description">Brève description du problème*</label>
-          <textarea id="description" placeholder="Modele" className="rounded-xl py-3 px-5 mb-3" />
+          <textarea id="description" name="description" placeholder="Modele" className="rounded-xl py-3 px-5 mb-3" />
           <div className="text-center">
-            <button className="rounded-full py-3 px-5 bg-[#336699] text-gray-100">Envoyer</button>
+            <Button />
           </div>
         </form>
       </div>
@@ -39,6 +66,15 @@ function ContactForm() {
         <Image src={img} alt="car headlight" height={600} className="object-cover rounded-r-xl aspect-square" />
       </div>
     </div>
+  )
+}
+
+function Button() {
+  const { pending } = useFormStatus()
+  return (
+    <button type="submit" className="rounded-full py-3 px-5 bg-[#336699] text-gray-100" disabled={pending}>
+      {!pending ? "Envoyer" : <SpinnerMini />}
+    </button>
   )
 }
 

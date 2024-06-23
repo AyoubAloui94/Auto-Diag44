@@ -19,7 +19,9 @@ function Footer() {
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Service</h1>
           <p>contact@autodiag44.com</p>
-          <p>06 52 68 24 29</p>
+          <p>
+            <Link href={"tel:0652682429"}>06 52 68 24 29</Link>
+          </p>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Placeholder</h1>
