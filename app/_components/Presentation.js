@@ -7,8 +7,8 @@ function Presentation() {
   return (
     <div className="grid grid-cols-3 gap-6 mt-16 mb-16 mx-12">
       <div className="flex flex-col justify-between items-start">
-        <h1 className="text-3xl">Car Diagnostics Company</h1>
-        <p>Professional car diagnostics and key programming services provided at your convenience. Trust us for reliable solutions.</p>
+        <h1 className="text-3xl">Diagnostic complet pour plus de 140 marques de voitures</h1>
+        <p>Notre service de diagnostic complet couvre plus de 140 marques de voitures, vous garantissant une analyse précise et fiable de votre véhicule. Faites confiance à notre expertise pour identifier et résoudre rapidement tous vos problèmes automobile.</p>
         <div className="text-center">
           <Link href={"/contact"} className="outline-1 outline rounded-full py-3 px-8">
             Contact

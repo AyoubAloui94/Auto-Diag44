@@ -29,7 +29,7 @@ function Navigation() {
 
   return (
     <nav className="z-10 text-xl">
-      <ul className="flex gap-16 items-center">
+      <ul className="flex gap-10 items-center">
         {routes.map(({ path, label }) => (
           <li key={path}>
             <Link href={path} className={`${isActive(path) ? "underline underline-offset-8" : "hover:text-gray-400 transition-colors"}`}>
