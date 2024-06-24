@@ -3,6 +3,8 @@ import "./globals.css"
 import Header from "@/app/_components/Header"
 import Footer from "./_components/Footer"
 import { Toaster } from "react-hot-toast"
+import { Suspense } from "react"
+import Spinner from "./_components/Spinner"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -41,7 +43,7 @@ export default function RootLayout({ children }) {
                 }
               }}
             />
-            {children}
+            <Suspense fallback={<Spinner />}>{children}</Suspense>
           </main>
         </div>
         <Footer />
