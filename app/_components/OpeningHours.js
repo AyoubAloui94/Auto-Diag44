@@ -5,7 +5,11 @@ function OpeningHours() {
     <div className="max-w-[60rem] mx-auto grid grid-cols-2">
       <div className="">
         <p>
-          Pour toute question ou pour prendre rendez-vous, n&lsquo;hésitez pas à nous contacter via le formulaire de contact ci-dessous ou par téléphone au <Link href={"tel:0652682429"}>06 52 68 24 29</Link>.{" "}
+          Pour toute question ou pour prendre rendez-vous, n&lsquo;hésitez pas à nous contacter via le formulaire de contact ci-dessous ou par téléphone au{" "}
+          <Link href={"tel:0652682429"}>
+            <span className="font-semibold underline underline-offset-2">0652682429</span>
+          </Link>
+          .{" "}
         </p>
       </div>
       <div className="flex flex-col items-center">

@@ -28,7 +28,7 @@ function Navigation() {
   const isActive = href => pathname === href
 
   return (
-    <nav className="z-10 text-xl">
+    <nav className="z-10 text-base">
       <ul className="flex gap-10 items-center">
         {routes.map(({ path, label }) => (
           <li key={path}>
