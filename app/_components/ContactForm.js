@@ -7,7 +7,6 @@ import { useFormStatus } from "react-dom"
 import SpinnerMini from "./SpinnerMini"
 import { useSearchParams } from "next/navigation"
 import { toast } from "react-hot-toast"
-import { revalidatePath } from "next/cache"
 import { useRef } from "react"
 
 function ContactForm() {
@@ -49,10 +48,10 @@ function ContactForm() {
     }
   }
   return (
-    <div className="grid grid-cols-2 px-10 gap-0">
-      <div className=" flex justify-end items-center">
-        <form ref={formRef} className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 max-w-[30rem]" action={handleEmail}>
-          <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 md:px-0 lg:gap-0">
+      <div className="flex flex-col lg:flex-row justify-center lg:justify-end items-center">
+        <form ref={formRef} className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 max-w-[25em] md:max-w-[30rem]" action={handleEmail}>
+          <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name">Nom*</label>
               <input id="name" name="name" placeholder="name" className="rounded-xl py-3 px-5 mb-3 w-full" required />
@@ -64,7 +63,7 @@ function ContactForm() {
           </div>
           <label htmlFor="email">E-mail</label>
           <input id="email" name="email" placeholder="(facultatif)" className="rounded-xl py-3 px-5 mb-3" />
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="car-make">Marque*</label>
               <input id="car-make" name="carMake" placeholder="marque" className="rounded-xl py-3 px-5 mb-3 w-full" required />
@@ -81,8 +80,8 @@ function ContactForm() {
           </div>
         </form>
       </div>
-      <div className="flex items-center justify-start">
-        <Image src={img} alt="car headlight" height={600} className="object-cover rounded-r-xl aspect-square" />
+      <div className="flex items-center justify-center lg:justify-start">
+        <Image src={img} alt="car headlight" className="object-cover max-w-[20rem] sm:max-w-[25rem] md:max-w-[30rem] lg:max-w-[27rem] rounded-2xl lg:rounded-none lg:rounded-r-xl aspect-video lg:aspect-square" />
       </div>
     </div>
   )

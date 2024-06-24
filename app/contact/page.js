@@ -7,7 +7,7 @@ export const metadata = {
 
 function Page() {
   return (
-    <div className="mx-20 my-12 flex flex-col gap-8">
+    <div className="mx-auto max-w-[30rem] lg:max-w-[90rem] my-12 flex flex-col gap-8">
       <h1 className="text-center text-3xl mb-8">Besoin d&lsquo;un coup de main ?</h1>
       <OpeningHours />
       <ContactForm />

@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-100 py-12 px-10">
-      <div className={`grid ${showForm ? "grid-cols-4" : "grid-cols-3"} gap-10`}>
+      <div className={`grid grid-cols-1 md:grid-cols-2 ${showForm ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-10`}>
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Auto-Diag 44</h1>
           <p>Expert en diagnostics automobiles pour plus de 140 marques.</p>
@@ -33,7 +33,7 @@ function Footer() {
         {showForm ? (
           <div className="flex flex-col gap-4">
             <h1 className="text-2xl font-semibold">Besoin d&lsquo;aide?</h1>
-            <p>describe problem here</p>
+            <p>Décrivez brièvement votre problème</p>
             <FooterForm />
           </div>
         ) : null}

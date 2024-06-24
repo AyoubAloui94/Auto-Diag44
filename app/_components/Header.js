@@ -26,7 +26,7 @@ function Header() {
   }
   return (
     <header className={`border-b border-primary-900 px-10 py-5 ${sticky}`}>
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-3">
+      <div className="flex flex-col gap-2 md:flex-row justify-between items-center max-w-7xl mx-auto px-3">
         <Logo />
         <Navigation />
       </div>
