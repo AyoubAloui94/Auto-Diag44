@@ -7,7 +7,7 @@ import logo from "@/public/2.png"
 const tabs = [
   {
     id: 876543,
-    title: "Services de programmation de clés",
+    title: "Programmation de clés",
     p: "Solutions expertes de programmation de clés pour votre confort et votre tranquillité d'esprit.",
     svg: key
   },
@@ -19,8 +19,8 @@ const tabs = [
   },
   {
     id: 57965789,
-    title: "Réparations de véhicules par un expert",
-    p: "Réparations effectuées par un professionnel qualifié pour assurer la fiabilité et la performance de votre véhicule.",
+    title: "Réparations par un expert",
+    p: "Réparations effectuées par un professionnel pour assurer la fiabilité et la performance de votre véhicule.",
     svg: repair
   }
 ]
@@ -35,9 +35,9 @@ function Hero() {
         <Image src={logo} alt="Auto Diag 44 logo" className="w-44 md:w-80" />
         <p className="text-base md:text-lg text-center md:text-start leading-snug text-gray-100 max-w-[20rem] md:max-w-[23rem]">Services professionnels de diagnostics automobiles et de programmation de clés à votre porte.</p>
       </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-0 mt-6 md:mt-16 mb-10">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 md:gap-12 mt-6 md:mt-16 mb-10">
         {tabs.map(({ id, title, p, svg }) => (
-          <div key={id} className="flex flex-col max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-6 mx-6 rounded-xl shadow-xl">
+          <div key={id} className="flex flex-col max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-6 mx-2  rounded-xl shadow-xl">
             <Image src={svg} width={40} height={40} alt={title} className="mb-4" />
             <h2 className="font-semibold text-base md:text-lg mb-4 text-center">{title}</h2>
             <p className="text-center text-sm md:text-base">{p}</p>
