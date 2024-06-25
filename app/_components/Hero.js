@@ -28,8 +28,8 @@ const tabs = [
 function Hero() {
   return (
     <div className="flex flex-col w-full items-center gap-4 gradient-background py-12 px-5">
-      <div className=" text-center px-2 md:px-0">
-        <h1 className="text-3xl md:text-6xl md:leading-relaxed text-gray-100 mb-8 md:mb-0">Diagnostics à la demande</h1>
+      <div className="text-center px-2 md:px-0">
+        <h1 className="text-3xl md:text-6xl md:leading-relaxed text-gray-100 mb-8 md:mb-8">Diagnostics à la demande</h1>
       </div>
       <div className="max-w-[50rem] px-6 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-12">
         <Image src={logo} alt="Auto Diag 44 logo" className="w-44 md:w-80" />
