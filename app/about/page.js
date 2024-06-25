@@ -1,4 +1,4 @@
-import AboutPresentation from "../_components/AboutPresentation"
+import About from "../_components/About"
 
 export const metadata = {
   title: "À propos"
@@ -7,7 +7,7 @@ export const metadata = {
 function Page() {
   return (
     <div>
-      <AboutPresentation />
+      <About />
     </div>
   )
 }
