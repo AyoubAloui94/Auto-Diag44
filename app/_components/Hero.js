@@ -1,18 +1,26 @@
+import Image from "next/image"
+import key from "@/public/key.svg"
+import map from "@/public/map.svg"
+import repair from "@/public/repair.svg"
+
 const tabs = [
   {
     id: 876543,
     title: "Services de programmation de clés",
-    p: "Solutions expertes de programmation de clés pour votre confort et votre tranquillité d'esprit."
+    p: "Solutions expertes de programmation de clés pour votre confort et votre tranquillité d'esprit.",
+    svg: key
   },
   {
     id: 3456789,
     title: "Service de diagnostics mobile",
-    p: "Notre service vous apporte des solutions de diagnostic complètes directement à votre emplacement."
+    p: "Notre service vous apporte des solutions de diagnostic complètes directement à votre emplacement.",
+    svg: map
   },
   {
     id: 57965789,
     title: "Réparations de véhicules par un expert",
-    p: "Réparations effectuées par un professionnel qualifié pour assurer la fiabilité et la performance de votre véhicule."
+    p: "Réparations effectuées par un professionnel qualifié pour assurer la fiabilité et la performance de votre véhicule.",
+    svg: repair
   }
 ]
 
@@ -26,8 +34,9 @@ function Hero() {
         <p className="text-base md:text-lg text-center leading-snug text-gray-100">Services professionnels de diagnostics automobiles et de programmation de clés à votre porte.</p>
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-0 mt-6 md:mt-16 mb-10">
-        {tabs.map(({ id, title, p }) => (
-          <div key={id} className="flex flex-col justify-center max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-14 mx-4 rounded-xl shadow-xl">
+        {tabs.map(({ id, title, p, svg }) => (
+          <div key={id} className="flex flex-col max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-6 mx-4 rounded-xl shadow-xl">
+            <Image src={svg} width={40} height={40} alt={title} className="mb-4" />
             <h2 className="font-semibold text-base md:text-lg mb-4 text-center">{title}</h2>
             <p className="text-center text-sm md:text-base">{p}</p>
           </div>
