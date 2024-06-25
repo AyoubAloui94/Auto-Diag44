@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function ServiceCard({ image, alt, title, description }) {
   return (
-    <div className="bg-[#fbfbfb] bg-opacity-90 rounded-2xl shadow-2xl">
+    <div className="bg-gray-100 bg-opacity-100 rounded-2xl shadow-2xl">
       <div className="flex flex-col ">
         <div>
           <Image src={image} alt={alt} className="object-cover rounded-t-2xl aspect-video" />
