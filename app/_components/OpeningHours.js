@@ -5,7 +5,7 @@ function OpeningHours() {
     <div className="max-w-[27.5rem] md:max-w-[40rem] lg:max-w-[60rem] mx-auto grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-1 px-5 md:px-0">
       <div className="">
         <p className="text-justify">
-          Pour toute question ou pour prendre rendez-vous, n&lsquo;hésitez pas à nous contacter via le formulaire de contact ci-dessous ou par téléphone au{" "}
+          Pour toute question ou pour prendre rendez-vous, n&apos;hésitez pas à nous contacter via le formulaire de contact ci-dessous ou par téléphone au{" "}
           <Link href={"tel:0652682429"}>
             <span className="font-semibold underline underline-offset-2">0652682429</span>
           </Link>

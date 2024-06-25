@@ -50,7 +50,7 @@ function ContactForm() {
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 md:px-0 lg:gap-0">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-end items-center">
-        <form ref={formRef} className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 max-w-[25em] md:max-w-[30rem]" action={handleEmail}>
+        <form ref={formRef} className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 max-w-[25rem] md:max-w-[30rem]" action={handleEmail}>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name">Nom*</label>

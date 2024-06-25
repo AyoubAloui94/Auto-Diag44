@@ -14,12 +14,13 @@ function Footer() {
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Auto-Diag 44</h1>
           <p>Expert en diagnostics automobiles pour plus de 140 marques.</p>
+          <p>SIRET: 40863730400028</p>
           <p className="uppercase text-xs">
             copyright © {new Date().getFullYear()} <Link href={"/"}>Auto-diag 44</Link>
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <h1 className="text-2xl font-semibold">Zone d&lsquo;intervention</h1>
+          <h1 className="text-2xl font-semibold">Zone d&apos;intervention</h1>
           <p>Active dans la région de la Loire-Atlantique (44)</p>
           <p>Service fiable et rapide directement à votre emplacement.</p>
         </div>
@@ -32,7 +33,7 @@ function Footer() {
         </div>
         {showForm ? (
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl font-semibold">Besoin d&lsquo;aide?</h1>
+            <h1 className="text-2xl font-semibold">Besoin d&apos;aide?</h1>
             <p>Décrivez brièvement votre problème</p>
             <FooterForm />
           </div>

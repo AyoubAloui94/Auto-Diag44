@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Link from "next/link"
 import img1 from "@/public/photo-1.webp"
 import img2 from "@/public/photo-2.webp"
+import ActionButton from "./ActionButton"
 
 function Presentation() {
   return (
@@ -9,11 +9,8 @@ function Presentation() {
       <div className="flex flex-col gap-3 lg:justify-between items-start">
         <h1 className="text-3xl">Diagnostic complet pour plus de 140 marques de voitures</h1>
         <p className="text-justify">Notre service de diagnostic complet couvre plus de 140 marques de voitures, vous garantissant une analyse précise et fiable de votre véhicule. Faites confiance à notre expertise pour identifier et résoudre rapidement tous vos problèmes automobile.</p>
-        <div className="text-center flex justify-center items-center w-full lg:w-auto">
-          <Link href={"/contact"} className="outline-1 outline rounded-full py-3 px-8">
-            Contact
-          </Link>
-        </div>
+
+        <ActionButton>Demandez un devis</ActionButton>
       </div>
       <Image src={img1} width={"auto"} height={"auto"} alt="mercedes hands on stirring wheel" className="object-cover object-top rounded-lg h-96" />
       <Image src={img2} width={"auto"} height={"auto"} alt="mercedes sports car" className="object-cover rounded-lg object-top h-96" />

@@ -19,13 +19,13 @@ const tabs = [
 function Hero() {
   return (
     <div className="flex flex-col w-full items-center gap-4 gradient-background py-12 px-5">
-      <div className=" w-96 text-center">
-        <h1 className="text-6xl leading-relaxed text-gray-100">Diagnostics à la demande</h1>
+      <div className="max-w-96 text-center px-2 md:px-0">
+        <h1 className="text-3xl md:text-6xl md:leading-relaxed text-gray-100">Diagnostics à la demande</h1>
       </div>
-      <div className="text-center w-96">
-        <p className="text-lg text-center leading-snug text-gray-100">Services professionnels de diagnostics automobiles et de programmation de clés à votre porte.</p>
+      <div className="text-center max-w-96 px-6">
+        <p className="text-base md:text-lg text-center leading-snug text-gray-100">Services professionnels de diagnostics automobiles et de programmation de clés à votre porte.</p>
       </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-0 mt-16 mb-10">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-0 mt-6 md:mt-16 mb-10">
         {tabs.map(({ id, title, p }) => (
           <div key={id} className="flex flex-col justify-center max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-14 mx-4 rounded-xl shadow-xl">
             <h2 className="font-semibold text-base md:text-lg mb-4 text-center">{title}</h2>

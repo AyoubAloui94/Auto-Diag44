@@ -27,7 +27,7 @@ const services = [
 function ServicesPresentation() {
   return (
     <div className="bg-[#9fd6fe] flex flex-col items-center px-10 py-16">
-      <h1 className="text-4xl font-bold mb-16">Nos Services</h1>
+      <h1 className="text-3xl md:text-4xl font-semibold mb-16">Nos Services</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 max-w-[90rem] mx-auto">
         {services.map(service => (
           <ServiceCard key={service.title} {...service} />
