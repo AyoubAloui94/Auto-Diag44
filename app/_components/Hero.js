@@ -37,7 +37,7 @@ function Hero() {
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-0 mt-6 md:mt-16 mb-10">
         {tabs.map(({ id, title, p, svg }) => (
-          <div key={id} className="flex flex-col max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-6 mx-4 rounded-xl shadow-xl">
+          <div key={id} className="flex flex-col max-w-[26rem] items-center text-gray-100 backdrop-filter backdrop-blur-3xl backdrop-sepia-[55%] px-4 py-6 mx-6 rounded-xl shadow-xl">
             <Image src={svg} width={40} height={40} alt={title} className="mb-4" />
             <h2 className="font-semibold text-base md:text-lg mb-4 text-center">{title}</h2>
             <p className="text-center text-sm md:text-base">{p}</p>
