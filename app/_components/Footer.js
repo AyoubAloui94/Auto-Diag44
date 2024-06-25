@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import FooterForm from "./FooterForm"
+import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid"
 
 function Footer() {
   const pathname = usePathname()
@@ -26,9 +27,17 @@ function Footer() {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Service</h1>
-          <p>contact@autodiag44.com</p>
           <p>
-            <Link href={"tel:0652682429"}>06 52 68 24 29</Link>
+            <Link href={"mailto:contact@autodiag44.com"} className="flex gap-1 items-center">
+              <EnvelopeIcon className="h-5 w-5" />
+              contact@autodiag44.com
+            </Link>
+          </p>
+          <p>
+            <Link href={"tel:0652682429"} className="flex gap-1 items-center">
+              <PhoneIcon className="h-5 w-5" />
+              06 52 68 24 29
+            </Link>
           </p>
         </div>
         {showForm ? (
