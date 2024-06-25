@@ -50,30 +50,42 @@ function ContactForm() {
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 md:px-0 lg:gap-0 ">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-end items-center">
-        <form ref={formRef} className="flex flex-col gap-1 bg-[#A3D9FF] rounded-2xl py-14 pb-8 px-8 " action={handleEmail}>
+        <form ref={formRef} className="flex flex-col gap-1 bg-[#0064eb] rounded-2xl py-14 pb-8 px-8 " action={handleEmail}>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="name">Nom*</label>
+              <label className="text-gray-100" htmlFor="name">
+                Nom*
+              </label>
               <input id="name" name="name" placeholder="name" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
             <div>
-              <label htmlFor="phone">Téléphone*</label>
+              <label className="text-gray-100" htmlFor="phone">
+                Téléphone*
+              </label>
               <input id="phone" name="phone" placeholder="numero" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
-          <label htmlFor="email">E-mail</label>
+          <label className="text-gray-100" htmlFor="email">
+            E-mail
+          </label>
           <input id="email" name="email" placeholder="(facultatif)" className="rounded-xl py-3 px-5 mb-3" />
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="car-make">Marque*</label>
+              <label className="text-gray-100" htmlFor="car-make">
+                Marque*
+              </label>
               <input id="car-make" name="carMake" placeholder="marque" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
             <div>
-              <label htmlFor="year-model">Année/Modèle*</label>
+              <label className="text-gray-100" htmlFor="year-model">
+                Année/Modèle*
+              </label>
               <input id="year-model" name="model" placeholder="Modèle" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
-          <label htmlFor="description">Brève description du problème*</label>
+          <label className="text-gray-100" htmlFor="description">
+            Brève description du problème*
+          </label>
           <textarea id="description" defaultValue={problem} name="description" placeholder="description" className="rounded-xl py-3 px-5 mb-3" required />
           <div className="text-center">
             <Button />
