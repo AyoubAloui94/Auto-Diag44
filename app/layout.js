@@ -13,7 +13,7 @@ export const metadata = {
     template: "%s | Auto-Diag 44",
     default: "Bienvenue | Auto-Diag 44"
   },
-  description: "car diagnostics"
+  description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés en Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles."
 }
 
 export default function RootLayout({ children }) {
