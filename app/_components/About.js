@@ -37,7 +37,7 @@ function About() {
     <div className="my-16 max-w-[90rem] mx-auto px-10 lg:px-20">
       <div className="max-w-[30rem] md:max-w-full mx-auto">
         {/* <h1 className="text-4xl text-center">À propos de nous</h1> */}
-        <div className="my-10 text-justify">
+        <div className="my-10 text-center md:text-justify">
           {sections.map((section, index) => (
             <AboutSection key={section.id} {...section} index={index} />
           ))}
@@ -62,8 +62,8 @@ function AboutSection({ text, image, alt, index, title, actionText }) {
       {index % 2 === 0 ? (
         <>
           <div className="flex flex-col order-1 md:-order-1 justify-between gap-4">
-            <h1 className="text-2xl text-start font-semibold">{title}</h1>
-            <p className="leading-loose">{text}</p>
+            <h1 className="text-2xl text-center md:text-start font-semibold">{title}</h1>
+            <p className="leading-relaxed">{text}</p>
             <ActionButton>{actionText}</ActionButton>
           </div>
           <Image src={image} alt={alt} className="object-cover rounded-2xl aspect-video md:aspect-square lg:aspect-video object-top shadow-2xl" />
@@ -72,7 +72,7 @@ function AboutSection({ text, image, alt, index, title, actionText }) {
         <>
           <Image src={image} alt={alt} className="object-cover rounded-2xl aspect-video md:aspect-square lg:aspect-video object-top shadow-2xl" />
           <div className="flex flex-col justify-between gap-4">
-            <h1 className="text-2xl text-start font-semibold">{title}</h1>
+            <h1 className="text-2xl text-center md:text-start font-semibold">{title}</h1>
             <p className="leading-relaxed">{text}</p>
             <ActionButton>{actionText}</ActionButton>
           </div>

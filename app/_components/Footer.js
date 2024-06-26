@@ -16,9 +16,6 @@ function Footer() {
           <h1 className="text-2xl font-semibold">Auto-Diag 44</h1>
           <p>Expert en diagnostics automobiles pour plus de 140 marques.</p>
           <p>SIRET: 40863730400028</p>
-          <p className="uppercase text-xs">
-            copyright © {new Date().getFullYear()} <Link href={"/"}>Auto-diag 44</Link>
-          </p>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Zone d&apos;intervention</h1>
@@ -47,6 +44,11 @@ function Footer() {
             <FooterForm />
           </div>
         ) : null}
+      </div>
+      <div className="flex md:justify-start mt-4">
+        <p className="text-xs">
+          Copyright © {new Date().getFullYear()} <Link href={"/"}>Auto-Diag 44. </Link>Tous droits réservés
+        </p>
       </div>
     </footer>
   )
