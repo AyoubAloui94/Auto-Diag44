@@ -5,7 +5,7 @@ import Footer from "./_components/Footer"
 import { Toaster } from "react-hot-toast"
 import { Suspense } from "react"
 import Spinner from "./_components/Spinner"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
                 }
               }}
             />
-            <SpeedInsights />
+            {/* <SpeedInsights /> */}
             <Suspense fallback={<Spinner />}>{children}</Suspense>
           </main>
         </div>
