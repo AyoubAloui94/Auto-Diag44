@@ -5,6 +5,7 @@ import Footer from "./_components/Footer"
 import { Toaster } from "react-hot-toast"
 import { Suspense } from "react"
 import Spinner from "./_components/Spinner"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -13,7 +14,7 @@ export const metadata = {
     template: "%s | Auto-Diag 44",
     default: "Bienvenue | Auto-Diag 44"
   },
-  description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés en Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles."
+  description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés sur Nantes et toute la région Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles."
 }
 
 export default function RootLayout({ children }) {
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
                 }
               }}
             />
+            <SpeedInsights />
             <Suspense fallback={<Spinner />}>{children}</Suspense>
           </main>
         </div>
