@@ -20,7 +20,7 @@ function ContactForm() {
 
       const { name, phone, email, carMake, model, description } = data
 
-      if (!name || !phone || !carMake || !model || !description) throw new Error("Veuillez remplir les champs obligatoires du formulaire")
+      if (!name || !phone || !carMake || !model || !description || !email) throw new Error("Veuillez remplir les champs obligatoires du formulaire")
 
       const params = {
         user_name: name,
@@ -56,19 +56,19 @@ function ContactForm() {
               <label className="text-primary-100" htmlFor="name">
                 Nom*
               </label>
-              <input id="name" name="name" placeholder="name" className="rounded-xl py-3 px-5 mb-3 w-full" required />
+              <input id="name" name="name" placeholder="nom" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
             <div>
               <label className="text-primary-100" htmlFor="phone">
                 Téléphone*
               </label>
-              <input id="phone" name="phone" placeholder="numero" className="rounded-xl py-3 px-5 mb-3 w-full" required />
+              <input id="phone" name="phone" placeholder="numéro de téléphone" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
           <label className="text-primary-100" htmlFor="email">
-            E-mail
+            E-mail*
           </label>
-          <input id="email" name="email" placeholder="(facultatif)" className="rounded-xl py-3 px-5 mb-3" />
+          <input id="email" name="email" placeholder="adresse e-mail" className="rounded-xl py-3 px-5 mb-3" required />
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="text-primary-100" htmlFor="car-make">
@@ -80,7 +80,7 @@ function ContactForm() {
               <label className="text-primary-100" htmlFor="year-model">
                 Année/Modèle*
               </label>
-              <input id="year-model" name="model" placeholder="Modèle" className="rounded-xl py-3 px-5 mb-3 w-full" required />
+              <input id="year-model" name="model" placeholder="année et modèle de votre véhicule" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
           <label className="text-primary-100" htmlFor="description">
