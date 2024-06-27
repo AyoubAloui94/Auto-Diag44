@@ -6,7 +6,7 @@ function OpeningHours() {
       <div className="">
         <p className="text-justify">
           Pour toute question ou pour prendre rendez-vous, n&apos;hésitez pas à nous contacter via le formulaire de contact ci-dessous ou par téléphone au{" "}
-          <Link href={"tel:0652682429"}>
+          <Link href={"tel:0652682429"} className="hover:text-gray-400 transition-colors duration-300">
             <span className="font-semibold underline underline-offset-2">0652682429</span>
           </Link>
           .{" "}

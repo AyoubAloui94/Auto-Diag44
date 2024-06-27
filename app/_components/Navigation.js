@@ -32,7 +32,7 @@ function Navigation() {
       <ul className="flex gap-5 md:gap-10 items-center">
         {routes.map(({ path, label }) => (
           <li key={path}>
-            <Link href={path} className={` ${isActive(path) ? "underline underline-offset-8" : "hover:text-gray-400 transition-colors"}`}>
+            <Link href={path} className={` ${isActive(path) ? "underline underline-offset-8" : "hover:text-gray-400 transition-colors duration-200"}`}>
               {label}
             </Link>
           </li>
