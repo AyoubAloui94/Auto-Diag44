@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-primary-950 text-primary-100 min-h-screen ${inter.className} flex flex-col`}>
+      <body className={`bg-primary-950 text-primary-900 min-h-screen ${inter.className} flex flex-col`}>
         <Header />
         <div className="flex-1">
           <main className="mx-auto w-full">

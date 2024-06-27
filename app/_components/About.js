@@ -45,7 +45,7 @@ function About() {
             <p>Faites confiance à Auto-Diag 44 pour tous vos besoins en matière de diagnostics automobiles et de programmation de clés. Nous nous engageons à vous offrir des solutions efficaces et personnalisées pour que vous puissiez reprendre la route en toute sérénité.</p>
             <p>Pour toute question ou pour prendre rendez-vous, n&apos;hésitez pas à nous contacter. Nous sommes impatients de vous servir !</p>
             <div className="text-center mt-2 md:mt-5">
-              <Link href={"/contact"} className="rounded-full py-3 px-5 text-gray-100 bg-[#336699]">
+              <Link href={"/contact"} className="rounded-full py-3 px-5 border-solid border-2 text-primary-100 bg-brand-blue hover:bg-primary-100 hover:text-brand-blue  border-brand-blue  transition-colors duration-300">
                 Obtenez de l&apos;aide
               </Link>
             </div>

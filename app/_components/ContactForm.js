@@ -50,40 +50,40 @@ function ContactForm() {
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 px-5 md:px-0 lg:gap-0 ">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-end items-center">
-        <form ref={formRef} className="flex flex-col gap-1 bg-[#0064eb] rounded-2xl py-14 pb-8 px-8 " action={handleEmail}>
+        <form ref={formRef} className="flex flex-col gap-1 bg-brand-blue rounded-2xl py-14 pb-8 px-8 " action={handleEmail}>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="text-gray-100" htmlFor="name">
+              <label className="text-primary-100" htmlFor="name">
                 Nom*
               </label>
               <input id="name" name="name" placeholder="name" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
             <div>
-              <label className="text-gray-100" htmlFor="phone">
+              <label className="text-primary-100" htmlFor="phone">
                 Téléphone*
               </label>
               <input id="phone" name="phone" placeholder="numero" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
-          <label className="text-gray-100" htmlFor="email">
+          <label className="text-primary-100" htmlFor="email">
             E-mail
           </label>
           <input id="email" name="email" placeholder="(facultatif)" className="rounded-xl py-3 px-5 mb-3" />
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="text-gray-100" htmlFor="car-make">
+              <label className="text-primary-100" htmlFor="car-make">
                 Marque*
               </label>
               <input id="car-make" name="carMake" placeholder="marque" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
             <div>
-              <label className="text-gray-100" htmlFor="year-model">
+              <label className="text-primary-100" htmlFor="year-model">
                 Année/Modèle*
               </label>
               <input id="year-model" name="model" placeholder="Modèle" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
-          <label className="text-gray-100" htmlFor="description">
+          <label className="text-primary-100" htmlFor="description">
             Brève description du problème*
           </label>
           <textarea id="description" defaultValue={problem} name="description" placeholder="description" className="rounded-xl py-3 px-5 mb-3" required />
@@ -102,7 +102,7 @@ function ContactForm() {
 function Button() {
   const { pending } = useFormStatus()
   return (
-    <button type="submit" className="rounded-full py-3 px-5 bg-[#336699] text-gray-100" disabled={pending}>
+    <button type="submit" className="rounded-full py-3 px-5 bg-brand-black border-solid border-brand-black border-2 hover:text-brand-black hover:bg-primary-100 hover:border-brand-black text-primary-100 transition-colors duration-300" disabled={pending}>
       {!pending ? "Envoyer" : <SpinnerMini />}
     </button>
   )

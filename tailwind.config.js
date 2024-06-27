@@ -9,8 +9,13 @@ module.exports = {
       },
       colors: {
         primary: {
+          100: "#f3f4f6",
           200: "#B7C7D7",
           900: "#1B2631"
+        },
+        brand: {
+          blue: "#0064eb",
+          black: "#000000"
         }
       }
     }
