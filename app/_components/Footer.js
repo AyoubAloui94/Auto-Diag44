@@ -45,7 +45,7 @@ function Footer() {
           </div>
         ) : null}
       </div>
-      <div className="flex md:justify-start mt-4">
+      <div className="flex md:justify-start mt-8">
         <p className="text-xs">
           Copyright © {new Date().getFullYear()} <Link href={"/"}>Auto-Diag 44. </Link>Tous droits réservés
         </p>

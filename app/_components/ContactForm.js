@@ -103,7 +103,7 @@ function Button() {
   const { pending } = useFormStatus()
   return (
     <button type="submit" className="rounded-full py-3 px-5 bg-brand-black border-solid border-brand-black border-2 hover:text-brand-black hover:bg-primary-100 hover:border-brand-black text-primary-100 transition-colors duration-300" disabled={pending}>
-      {!pending ? "Envoyer" : <SpinnerMini />}
+      {!pending ? "Demander un devis" : <SpinnerMini />}
     </button>
   )
 }

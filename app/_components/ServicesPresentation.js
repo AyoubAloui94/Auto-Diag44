@@ -2,7 +2,7 @@ import image1 from "@/public/photo-6.webp"
 import image2 from "@/public/photo-15.webp"
 import image3 from "@/public/photo-7.webp"
 import image4 from "@/public/photo-13.webp"
-import image5 from "@/public/photo-14.webp"
+// import image5 from "@/public/photo-14.webp"
 import image6 from "@/public/photo-16.webp"
 import image7 from "@/public/photo-17.webp"
 import image8 from "@/public/photo-18.webp"
@@ -54,8 +54,8 @@ const services = [
     alt: "Résolution des problèmes d'antidémarrage et de Neiman"
   },
   {
-    title: "Nettoyage des phares et feux arrière jaunis",
-    description: "Nous offrons un service de nettoyage pour restaurer la clarté de vos phares et feux arrière jaunis. Améliorez la visibilité et l'apparence de votre véhicule grâce à notre expertise en entretien automobile.",
+    title: "Nettoyage des phares jaunis",
+    description: "Nous offrons un service de nettoyage pour restaurer la clarté de vos phares. Améliorez la visibilité et l'apparence de votre véhicule grâce à notre expertise en entretien automobile.",
     image: image8,
     alt: "Nettoyage des phares et feux arrière jaunis"
   },
