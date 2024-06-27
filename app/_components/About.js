@@ -66,11 +66,11 @@ function AboutSection({ text, image, alt, index, title, actionText }) {
             <p className="leading-relaxed">{text}</p>
             <ActionButton>{actionText}</ActionButton>
           </div>
-          <Image src={image} alt={alt} className="object-cover rounded-2xl aspect-video md:aspect-square lg:aspect-video object-top shadow-2xl" />
+          <Image src={image} alt={alt} className="object-cover rounded-2xl aspect-video md:aspect-square lg:aspect-video object-top shadow-2xl" placeholder="blur" />
         </>
       ) : (
         <>
-          <Image src={image} alt={alt} className="object-cover rounded-2xl aspect-video md:aspect-square lg:aspect-video object-top shadow-2xl" />
+          <Image src={image} alt={alt} className="object-cover rounded-2xl aspect-video md:aspect-square lg:aspect-video object-top shadow-2xl" placeholder="blur" />
           <div className="flex flex-col justify-between gap-4">
             <h1 className="text-2xl text-center md:text-start font-semibold">{title}</h1>
             <p className="leading-relaxed">{text}</p>

@@ -7,8 +7,8 @@ function Presentation() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-16 mb-16 px-6 max-w-[30rem] lg:max-w-[90rem] mx-auto">
       <div className="grid grid-cols-2 lg:grid-cols-1 gap-2">
-        <Image src={img1} width={"auto"} height={"auto"} alt="mercedes hands on stirring wheel" className="object-cover object-top rounded-2xl aspect-square lg:aspect-auto lg:h-96" />
-        <Image src={img2} width={"auto"} height={"auto"} alt="mercedes sports car" className="object-cover rounded-2xl object-top aspect-square lg:hidden" />
+        <Image src={img1} width={"auto"} height={"auto"} alt="mercedes hands on stirring wheel" className="object-cover object-top rounded-2xl aspect-square lg:aspect-auto lg:h-96" placeholder="blur" />
+        <Image src={img2} width={"auto"} height={"auto"} alt="mercedes sports car" className="object-cover rounded-2xl object-top aspect-square lg:hidden" placeholder="blur" />
       </div>
       <div className="flex flex-col gap-3 lg:justify-between items-center">
         <h1 className="text-3xl text-center">Diagnostic complet pour plus de 140 marques de voitures</h1>
@@ -16,7 +16,7 @@ function Presentation() {
 
         <ActionButton>Demandez un devis</ActionButton>
       </div>
-      <Image src={img2} width={"auto"} height={"auto"} alt="mercedes sports car" className="object-cover hidden lg:block rounded-2xl object-top h-96" />
+      <Image placeholder="blur" src={img2} width={"auto"} height={"auto"} alt="mercedes sports car" className="object-cover hidden lg:block rounded-2xl object-top h-96" />
     </div>
   )
 }

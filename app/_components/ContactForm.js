@@ -93,7 +93,7 @@ function ContactForm() {
         </form>
       </div>
       <div className="flex items-center justify-center lg:justify-start">
-        <Image src={img} alt="car headlight" className="object-cover lg:max-w-[27rem] rounded-2xl lg:rounded-none lg:rounded-r-xl aspect-video lg:aspect-square" />
+        <Image src={img} alt="car headlight" className="object-cover lg:max-w-[27rem] rounded-2xl lg:rounded-none lg:rounded-r-xl aspect-video lg:aspect-square" placeholder="blur" />
       </div>
     </div>
   )
