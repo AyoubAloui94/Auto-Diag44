@@ -14,12 +14,46 @@ export const metadata = {
     template: "%s | Auto-Diag 44",
     default: "Bienvenue | Auto-Diag 44"
   },
-  description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés sur Nantes et toute la région Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles."
+  metadataBase: new URL(process.env.VERCEL_URL),
+  alternates: {
+    canonical: "/"
+  },
+  description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés à Nantes et en Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles.",
+  keywords: ["Diagnostics", "Programmation cles", "Nantes", "Loire-Atlantique", "Reparation"],
+  authors: [
+    { name: "Ayoub Aloui", url: "https://alouiayoub.com" },
+    { name: "Web & IT Genius", url: "https://webitgenius.com" }
+  ],
+  creator: "Web & IT Genius",
+  publisher: "Web & IT Genius",
+  locale: "fr_FR",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Auto-Diag 44",
+    description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés sur Nantes et toute la région Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles.",
+    images: {
+      url: "2.png",
+      alt: "Auto-Diag 44 Logo"
+    }
+  }
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={`bg-primary-950 text-primary-900 min-h-screen ${inter.className} flex flex-col`}>
         <Header />
         <div className="flex-1">

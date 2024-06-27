@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 const routes = [
   {
     path: "/",
-    label: "Acceuil"
+    label: "Accueil"
   },
   {
     path: "/services",

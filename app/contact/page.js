@@ -2,7 +2,11 @@ import ContactForm from "../_components/ContactForm"
 import OpeningHours from "../_components/OpeningHours"
 
 export const metadata = {
-  title: "Contact"
+  title: "Contact",
+  description: "Contactez Auto-Diag 44 à Nantes et en Loire-Atlantique pour tous vos besoins en diagnostics automobiles, réparation et programmation de clés. Notre expert se déplace à votre emplacement. Demandez un devis ou prenez rendez-vous dès aujourd'hui.",
+  alternates: {
+    canonical: "/contact"
+  }
 }
 
 function Page() {

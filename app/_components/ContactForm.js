@@ -33,7 +33,10 @@ function ContactForm() {
       }
 
       await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, params, {
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        limitRate: {
+          throttle: 300000
+        }
       })
 
       toast.success("Demande envoyée avec succès! nous vous contacterons dans les plus brefs délais")
