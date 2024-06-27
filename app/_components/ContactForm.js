@@ -80,7 +80,7 @@ function ContactForm() {
               <label className="text-primary-100" htmlFor="year-model">
                 Année/Modèle*
               </label>
-              <input id="year-model" name="model" placeholder="année et modèle de votre véhicule" className="rounded-xl py-3 px-5 mb-3 w-full" required />
+              <input id="year-model" name="model" placeholder="année et modèle" className="rounded-xl py-3 px-5 mb-3 w-full" required />
             </div>
           </div>
           <label className="text-primary-100" htmlFor="description">
