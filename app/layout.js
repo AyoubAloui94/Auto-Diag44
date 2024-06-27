@@ -14,7 +14,7 @@ export const metadata = {
     template: "%s | Auto-Diag 44",
     default: "Bienvenue | Auto-Diag 44"
   },
-  metadataBase: new URL(process.env.VERCEL_URL),
+  metadataBase: new URL("https://autodiag44.com"),
   alternates: {
     canonical: "/"
   },
