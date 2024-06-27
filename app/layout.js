@@ -28,7 +28,7 @@ export const metadata = {
   publisher: "Web & IT Genius",
   locale: "fr_FR",
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
