@@ -1,6 +1,6 @@
 import Image from "next/image"
-import img1 from "@/public/photo-1.webp"
-import img2 from "@/public/photo-2.webp"
+import img1 from "@/public/diagnostics.webp"
+import img2 from "@/public/man-fixing-car.webp"
 import ActionButton from "./ActionButton"
 
 function Presentation() {
