@@ -48,6 +48,14 @@ export const metadata = {
       url: "2.png",
       alt: "Auto-Diag 44 Logo"
     }
+  },
+  openGraph: {
+    title: "Auto-Diag 44",
+    description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés sur Nantes et toute la région Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles.",
+    url: "https://autodiag44.com",
+    siteName: "Auto-Diag 44",
+    images: "diagnostics.webp",
+    type: "website"
   }
 }
 
