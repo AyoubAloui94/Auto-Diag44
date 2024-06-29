@@ -16,6 +16,16 @@ function Footer() {
           <h1 className="text-2xl font-semibold">Auto-Diag 44</h1>
           <p>Expert en diagnostics automobiles pour plus de 140 marques.</p>
           <p>SIRET: 40863730400028</p>
+          <p>
+            <Link href={"/legal/terms-of-service"} className="hover:underline hover:underline-offset-4">
+              Conditions d&apos;utilisation
+            </Link>
+          </p>
+          <p>
+            <Link href={"/legal/privacy-policy"} className="hover:underline hover:underline-offset-4">
+              Politique de confidentialité
+            </Link>
+          </p>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">Zone d&apos;intervention</h1>
