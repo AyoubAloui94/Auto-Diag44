@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "À propos",
+  title: "Conditions d'utilisation",
   description: "Découvrez les conditions d'utilisation des services de diagnostic automobile, de programmation et de réparation de clés d'Auto-Diag 44 en Loire-Atlantique.",
   alternates: {
     canonical: "/legal/terms-of-service"

@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 export const metadata = {
-  title: "À propos",
+  title: "Politique de confidentialité",
   description: "Apprenez comment Auto-Diag 44 protège vos informations personnelles avec notre Politique de confidentialité. Contactez-nous pour plus de détails.",
   alternates: {
     canonical: "/legal/privacy-policy"
