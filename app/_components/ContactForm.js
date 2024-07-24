@@ -63,7 +63,7 @@ function ContactForm() {
 
         formRef.current?.reset()
       } else {
-        throw new Error("Invalid Captcha")
+        throw new Error("Captcha non valide")
       }
     } catch (error) {
       let errMsg
@@ -114,7 +114,7 @@ function ContactForm() {
           </label>
           <textarea id="description" defaultValue={problem} name="description" placeholder="description" className="rounded-xl py-3 px-5 mb-3" required />
           <div className="flex justify-center mb-4">
-            <HCaptcha sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY} ref={captchaRef} size="normal" onVerify={onVerify} onExpire={onExpire} />
+            <HCaptcha sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY} ref={captchaRef} size="normal" onVerify={onVerify} onExpire={onExpire} languageOverride="fr" />
           </div>
           <div className="text-center">
             <Button />
