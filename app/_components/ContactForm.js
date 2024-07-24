@@ -7,41 +7,64 @@ import { useFormStatus } from "react-dom"
 import SpinnerMini from "./SpinnerMini"
 import { useSearchParams } from "next/navigation"
 import { toast } from "react-hot-toast"
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import HCaptcha from "@hcaptcha/react-hcaptcha"
 
 function ContactForm() {
   const searchParams = useSearchParams()
   const problem = searchParams.get("description")
   const formRef = useRef()
+  const captchaRef = useRef()
+  const [token, setToken] = useState(null)
+
+  function onVerify(token) {
+    setToken(token)
+  }
+  function onExpire() {
+    setToken(null)
+  }
 
   async function handleEmail(formData) {
     try {
-      const data = Object.fromEntries(formData)
-
-      const { name, phone, email, carMake, model, description } = data
-
-      if (!name || !phone || !carMake || !model || !description || !email) throw new Error("Veuillez remplir les champs obligatoires du formulaire")
-
-      const params = {
-        user_name: name,
-        user_email: email,
-        user_phone: phone,
-        user_car_make: carMake,
-        user_car_model: model,
-        message: description,
-        to_name: "Aziz"
-      }
-
-      await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, params, {
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        limitRate: {
-          throttle: 300000
-        }
+      const response = await fetch("/api/verify-captcha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ token })
       })
 
-      toast.success("Demande envoyée avec succès! nous vous contacterons dans les plus brefs délais")
+      const hcaptchaData = await response.json()
+      if (hcaptchaData.success) {
+        const data = Object.fromEntries(formData)
 
-      formRef.current?.reset()
+        const { name, phone, email, carMake, model, description } = data
+
+        if (!name || !phone || !carMake || !model || !description || !email) throw new Error("Veuillez remplir les champs obligatoires du formulaire")
+
+        const params = {
+          user_name: name,
+          user_email: email,
+          user_phone: phone,
+          user_car_make: carMake,
+          user_car_model: model,
+          message: description,
+          to_name: "Aziz"
+        }
+
+        await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, params, {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+          limitRate: {
+            throttle: 300000
+          }
+        })
+
+        toast.success("Demande envoyée avec succès! nous vous contacterons dans les plus brefs délais")
+
+        formRef.current?.reset()
+      } else {
+        throw new Error("Invalid Captcha")
+      }
     } catch (error) {
       let errMsg
       if (error?.status === 429) errMsg = `Veuillez réessayer plus tard.`
@@ -90,6 +113,9 @@ function ContactForm() {
             Brève description du problème*
           </label>
           <textarea id="description" defaultValue={problem} name="description" placeholder="description" className="rounded-xl py-3 px-5 mb-3" required />
+          <div className="flex justify-center mb-4">
+            <HCaptcha sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY} ref={captchaRef} size="normal" onVerify={onVerify} onExpire={onExpire} />
+          </div>
           <div className="text-center">
             <Button />
           </div>
