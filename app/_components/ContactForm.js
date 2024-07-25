@@ -70,7 +70,6 @@ function ContactForm() {
       if (error?.status === 429) errMsg = `Veuillez réessayer plus tard.`
       else errMsg = error?.text || error?.message
       toast.error(errMsg)
-      console.log(error)
     }
   }
   return (
