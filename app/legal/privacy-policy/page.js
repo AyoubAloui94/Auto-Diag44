@@ -8,7 +8,7 @@ export const metadata = {
   },
   openGraph: {
     description: "Apprenez comment Auto-Diag 44 protège vos informations personnelles avec notre Politique de confidentialité. Contactez-nous pour plus de détails.",
-    url: "https://autodiag44.com/legal/privacy-policy"
+    url: "https://www.autodiag44.com/legal/privacy-policy"
   }
 }
 

@@ -8,7 +8,7 @@ export const metadata = {
   },
   openGraph: {
     description: "Découvrez les conditions d'utilisation des services de diagnostic automobile, de programmation et de réparation de clés d'Auto-Diag 44 en Loire-Atlantique.",
-    url: "https://autodiag44.com/legal/terms-of-service"
+    url: "https://www.autodiag44.com/legal/terms-of-service"
   }
 }
 

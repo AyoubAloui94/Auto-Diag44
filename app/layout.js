@@ -14,7 +14,7 @@ export const metadata = {
     template: "%s | Auto-Diag 44",
     default: "Bienvenue | Auto-Diag 44"
   },
-  metadataBase: new URL("https://autodiag44.com"),
+  metadataBase: new URL("https://www.autodiag44.com"),
   alternates: {
     canonical: "/"
   },
@@ -52,7 +52,7 @@ export const metadata = {
   openGraph: {
     title: "Auto-Diag 44",
     description: "Bienvenue chez Auto-Diag 44, votre expert en diagnostics automobiles, réparation et programmation de clés sur Nantes et toute la région Loire-Atlantique. Services rapides, fiables et pratiques pour plus de 140 marques de véhicules. Interventions sur site disponibles.",
-    url: "https://autodiag44.com",
+    url: "https://www.autodiag44.com",
     siteName: "Auto-Diag 44",
     images: "diagnostics.webp",
     type: "website"
